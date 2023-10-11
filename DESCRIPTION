@@ -6,10 +6,9 @@ Author:
     Jingqi Duan <jduan27@wisc.edu>
     Sunduz Keles <keles@stat.wisc.edu>
 Maintainer: Jingqi Duan <jduan27@wisc.edu>
-Description: INCAData summarizes epigenomic information for variants, 
-    including aligned read counts from the BAM file and peak signal values 
-    from the narrowPeak BED file. The resulting output files can be further
-    used in the INCA package.
+Description: INCAData summarizes aligned read counts from the BAM file and 
+    peak signal values from the narrowPeak BED file at the variante level. 
+    The resulting output files can be further used within the INCA package.
 Depends: R (>= 3.6.0)
 License: What license is it under?
 Encoding: UTF-8
