@@ -10,16 +10,16 @@ Summarizes peak signal values from the narrowPeak BED file.
 The summarizeReadCounts() function summarizes peak signal values in the narrowPeak BED file. Only regions with a p-value less than 0.05 under FDR control are included. If multiple files are provided, peak signal values are combined at the region level.
 }
 \usage{
-summarizePeakSignals(experiment, suffix=NULL, chrom=c(1:22,'X','Y'), output=NULL)
+summarizePeakSignals(input, suffix=NULL, chrom=c(1:22,'X','Y'), output=NULL)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{experiment}{
+  \item{input}{
 %%     ~~Describe \code{x} here~~
   A vector of the names of the narrowPeak BED files.
   }
   \item{suffix}{
-  A vector of additional information about each file. By default, no additional information is provided. If `experiment` contains multiple files but `suffix` is not provided, `suffix` is set to the index of the files.
+  A vector of additional information about each file. By default, no additional information is provided. If `input` contains multiple files but `suffix` is not provided, `suffix` is set to the index of the files.
 }
   \item{chrom}{
   A vector of chromosome names specifying which chromosome to include. If `chrom` is set to NULL, all chromosomes are include.
@@ -37,7 +37,7 @@ summarizePeakSignals(experiment, suffix=NULL, chrom=c(1:22,'X','Y'), output=NULL
 %%  \item{comp1 }{Description of 'comp1'}
 %%  \item{comp2 }{Description of 'comp2'}
 %% ...
-A data.table containing columns of *Chr*, *Start*, and *End* by default, and columns of *signalValue*, with one column for each file in the experiment.
+A data.table containing columns of *Chr*, *Start*, and *End* by default, and columns of *signalValue*, with one column for each file in the `input`.
 }
 \references{
 %% ~put references to the literature/web site here ~

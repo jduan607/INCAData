@@ -10,11 +10,11 @@ Computes normalized or raw aligned read counts from the BAM file
 The summarizeReadCounts() function calculates normazlied or raw aligned read counts for each variant in the BAM file. Normalized aligned read counts are computed by dividing the raw read counts by the total number of reads in the sample and then multiplying by the scaling factor.
 }
 \usage{
-summarizeReadCounts(experiment, scale=1e+7, chrom=c(1:22,'X','Y'), output=NULL)
+summarizeReadCounts(input, scale=1e+7, chrom=c(1:22,'X','Y'), output=NULL)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{experiment}{
+  \item{input}{
 %%     ~~Describe \code{x} here~~
   A single character string of the name of the BAM file.
   }
