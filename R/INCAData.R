@@ -72,5 +72,3 @@ summarizePeakSignals = function(input, suffix=NULL, chrom=c(1:22,'X','Y'), outpu
     }
     return(signals_dt)
 }
-
-
