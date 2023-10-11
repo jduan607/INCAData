@@ -36,8 +36,8 @@ summarizeReadCounts = function(input, scale=1e+7, chrom=c(1:22,'X','Y'), output=
 
 summarizePeakSignals = function(input, suffix=NULL, chrom=c(1:22,'X','Y'), output=NULL) {
     peak = lapply(input, function(x) fread(x, select=c(1,2,3,7,8),
-                                                col.names=c('Chr','Start','End','signalValue','pValue')))
-    peak = lapply(peak, function(x) x[p.adjust(10^(-pValue), method='fdr') < 0.05, ]) # FDR control p-value
+                                                col.names=c('Chr','Start','End','signalValue','p')))
+    peak = lapply(peak, function(x) x[p.adjust(10^(-p), method='fdr') < 0.05, ]) # FDR control p-value
     peak = lapply(peak, function(x) x[, Chr := standardizeChr(Chr)]) # standardize chromosome names
 
     if (!is.null(chrom)) {
