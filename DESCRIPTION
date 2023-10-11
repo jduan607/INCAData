@@ -1,6 +1,6 @@
 Package: INCAData
 Type: Package
-Title: Data preparation for INCA package
+Title: Data preparation for the INCA package
 Version: 0.1.0
 Author: 
     Jingqi Duan <jduan27@wisc.edu>
@@ -19,3 +19,5 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.2.3
 VignetteBuilder: knitr
+Imports:
+  GenomicRanges
